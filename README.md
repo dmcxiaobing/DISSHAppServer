@@ -6,13 +6,14 @@ this is david idea app server project....
 
 当然还没有全部完善，功能正在不断完善更新中。。。
 
-## 开发工具：IntelliJ IDEA
 
-## jdk版本：1.8 
+- **开发工具：IntelliJ IDEA**   
 
-## tomcat：8.5
+- **jdk版本：1.8** 
 
-## 数据库：mysql
+- **tomcat：8.5** 
+
+- **数据库：mysql**
 
 [作者：程序员小冰](http://blog.csdn.net/qq_21376985)
 
