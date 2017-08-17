@@ -5,6 +5,7 @@ import com.david.disshappserver.common.bean.ResponseInfo;
 import com.david.disshappserver.common.constants.AdminConstant;
 import com.david.disshappserver.service.IUserService;
 import com.david.disshappserver.utils.LogUtils;
+import com.qiniu.api.net.Http;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -65,6 +66,17 @@ public class AdminController {
             return "admin/login";
         }
         return "admin/" + page;
+    }
+
+    /**
+     * 退出后台的操作
+     */
+    @RequestMapping("/logout")
+    public String logout(HttpSession session){
+        //从session域中删除用户，然后重定向到登陆页面
+        session.removeAttribute(AdminConstant.KEY_CURR_USER);
+        return "redirect:login";
+
     }
 
 }

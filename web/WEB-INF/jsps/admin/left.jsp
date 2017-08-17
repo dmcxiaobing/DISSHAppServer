@@ -88,7 +88,7 @@ body {
 								</tr>
 								<tr>
 									<td height="22" class="left-font01">[&nbsp;<a
-										href="<%=basePath%>admin/loginout" target="_top"
+										href="<%=basePath%>admin/logout" target="_top"
 										class="left-font01">退出</a>&nbsp;]
 									</td>
 								</tr>

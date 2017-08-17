@@ -11,7 +11,7 @@ this is david idea app server project....
 
 - **jdk版本：1.8** 
 
-- **tomcat：8.5** 
+- **Apache Tomcat/8.5.12** 
 
 - **数据库：mysql**
 
