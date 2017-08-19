@@ -13,10 +13,11 @@ public enum  ResponseCodeNum {
 
     CODE_SUCCESS("200", "success，成功"),
     CODE_SERVER_EXCEPTION("500", "server exception，服务器异常"),
-    CODE_PARAM_INVALUD("501", "request parameters is invalud 参数非法"),
-    CODE_SOURCE_EXISTS("502", "such source exists"),
+    CODE_PARAM_INVALID("501", "request parameters is invalid 参数非法"),
+    CODE_SOURCE_EXISTS("502", "such source exists 资源已经存在了"),
     CODE_NO_SOURCE_EXISTS("503", "no such source exists 资源不存在"),
-    CODE_OTHER_ERROR("504", "other error happened");
+    CODE_OTHER_ERROR("504", "other error happened 其他异常"),
+    CODE_PASSWORD_ERROR("405", "password is error 其他异常");
 
     private String code;
     private String desc;

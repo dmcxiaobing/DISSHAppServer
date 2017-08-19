@@ -142,7 +142,7 @@ public class SafeCodeController {
 			//忽略大小写验证通过
 			responseInfo.setCode(ResponseCodeNum.CODE_SUCCESS.getCode());
 		} else {
-			responseInfo.setCode(ResponseCodeNum.CODE_PARAM_INVALUD.getCode());
+			responseInfo.setCode(ResponseCodeNum.CODE_PARAM_INVALID.getCode());
 		}
 		return responseInfo;
 	}

@@ -28,9 +28,18 @@ public class UserDaoImpl extends BaseDAO implements IUserDao {
         return null;
     }
 
+    /**
+     * 注册用户
+     */
     @Override
-    public ResponseInfo regist(String username, String password) {
-        return null;
+    public User regist(User user) {
+        Integer userId = (Integer) super.save(user);
+        if (userId == null){
+            //则注册操作失败
+            return null;
+        }
+        //查找到用户，根据保存后的ID
+        return findUserById(userId);
     }
 
     @Override

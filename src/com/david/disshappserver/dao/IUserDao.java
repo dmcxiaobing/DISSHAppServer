@@ -26,7 +26,7 @@ public interface IUserDao {
     /**
      * 用户注册
      */
-    public ResponseInfo regist(String username, String password);
+    public User regist(User user);
     /**
      * 用户登陆
      */
