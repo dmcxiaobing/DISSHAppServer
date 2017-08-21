@@ -7,6 +7,7 @@ package com.david.disshappserver.beans;
  */
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "t_user")
-public class User {
+public class User implements Serializable{
 
 
     public static final int ROLE_USER = 0;

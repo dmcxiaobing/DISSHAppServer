@@ -24,8 +24,8 @@ body {
 <link href="resource/admin/css/css.css" rel="stylesheet" type="text/css" />
 <link href="resource/admin/css/style.css" type="text/css" rel="stylesheet">
 </head>
-
-<body>
+<%--这里实现回车进行登陆--%>
+<body onkeydown="if(event.keyCode==13){check()}">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td height="147" background="resource/admin/images/top02.gif"><img src="resource/admin/images/top03.gif" width="776" height="147" /></td>

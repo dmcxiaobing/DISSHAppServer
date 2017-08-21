@@ -16,7 +16,7 @@
 	function link() {
 		var content = document.getElementById("content").value;
 		if (content == "") {
-			alert("请填趣事内容！");
+			alert("请填笑话内容！");
 			document.getElementById("content").focus();
 		} else {
 			document.getElementById("fom").submit();
@@ -35,12 +35,12 @@
 </head>
 
 <body class="ContentBody">
-	<form action="<%=basePath%>qushiadmin/addqushi" method="post" name="fom" id="fom">
+	<form action="<%=basePath%>admin/joke/addJoke" method="post" name="fom" id="fom">
 		<div class="MainDiv">
 			<table width="99%" border="0" cellpadding="0" cellspacing="0"
 				class="CContent">
 				<tr>
-					<th class="tablestyle_title">添加趣事</th>
+					<th class="tablestyle_title">添加笑话</th>
 				</tr>
 				<tr>
 					<td class="CPanel">
@@ -50,26 +50,26 @@
 							<TR>
 								<TD width="100%">
 									<fieldset style="height: 100%;">
-										<legend>添加趣事</legend>
+										<legend>添加笑话</legend>
 										<table border="0" cellpadding="2" cellspacing="1"
 											style="width: 100%">
 											<tr>
-												<td nowrap align="right" width="13%">趣事内容:</td>
+												<td nowrap align="right" width="13%">笑话内容:</td>
 												<td><textarea id="content" name="content" rows="10"
 														cols="100"></textarea></td>
 											</tr>
 											<tr>
 												<td nowrap align="right" width="13%">是否精选:</td>
 												<td>
-													<label for="jingxuan">是</label><input type="radio" id="jingxuan" name="isJingXuan" value="1" checked/>
+													<label for="best">是</label><input type="radio" id="best" name="isBest" value="1" checked/>
     												&nbsp;&nbsp;&nbsp;&nbsp;
-    												<label for="notJingxuan">否</label><input type="radio" id="notJingxuan" name="isJingXuan" value="0" />
+    												<label for="notBest">否</label><input type="radio" id="notBest" name="isBest" value="0" />
 												</td>
 											</tr>
 											<tr>
 												<td nowrap align="right" width="13%">支持数:</td>
 												<td>
-													<input type="text" style="width:100px;" name="dingNum" id="dingNum" value="0"
+													<input type="text" style="width:100px;" name="supportNum" id="supportNum" value="0"
 													 onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
 												</td>
 											</tr>

@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>奇趣营-添加趣事</title>
+<title>DavidAppServer添加成功</title>
 </head>
 <body>
 	添加成功！<a href="javascript:window.history.go(-1);">返回</a>

@@ -4,7 +4,15 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+/**
+ * @Author ：程序员小冰
+ * @新浪微博 ：http://weibo.com/mcxiaobing
+ * @GitHub: https://github.com/QQ986945193
+ */
 
+/**
+ * 一个分页的类
+ */
 public class PageResult<T> implements Serializable {
 
 	private static final long serialVersionUID = -8689423380671812808L;
@@ -14,8 +22,11 @@ public class PageResult<T> implements Serializable {
 	private Logger logger = Logger.getLogger(this.getClass());
 	
 	private int pageIndex;
+//	每页显示个数
 	private int pageSize;
+//	总共多少条记录
 	private int totalCount;
+	/*总共多少页*/
 	private int pageCount;
 	private List<T> list;
 

@@ -108,7 +108,7 @@ body {
 									<td width="8%"><img name="img7" id="img7"
 										src="resource/admin/images/ico04.gif" width="8" height="11" /></td>
 									<td width="92%"><a href="javascript:" target="mainFrame"
-										class="left-font03" onClick="list('7');">趣事管理</a></td>
+										class="left-font03" onClick="list('7');">笑话管理</a></td>
 								</tr>
 							</table>
 						</td>
@@ -119,14 +119,14 @@ body {
 					<tr>
 						<td width="9%" height="20"><img id="xiaotu17"
 							src="resource/admin/images/ico06.gif" width="8" height="12" /></td>
-						<td width="91%"><a href="<%=basePath%>qushiadmin/list" target="mainFrame"
-							class="left-font03" onClick="tupian('17');">趣事列表</a></td>
+						<td width="91%"><a href="<%=basePath%>admin/joke/list" target="mainFrame"
+							class="left-font03" onClick="tupian('17');">笑话列表</a></td>
 					</tr>
 					<tr>
 						<td width="9%" height="20"><img id="xiaotu18"
 							src="resource/admin/images/ico06.gif" width="8" height="12" /></td>
-						<td width="91%"><a href="<%=basePath%>qushiadmin/add/index"
-							target="mainFrame" class="left-font03" onClick="tupian('18');">添加趣事</a></td>
+						<td width="91%"><a href="<%=basePath%>admin/joke/addToJsp"
+							target="mainFrame" class="left-font03" onClick="tupian('18');">添加笑话</a></td>
 					</tr>
 				</table> 
 				<!--  趣事管理结束    --> 
