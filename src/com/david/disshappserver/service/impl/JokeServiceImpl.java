@@ -27,4 +27,18 @@ public class JokeServiceImpl implements IJokeService{
     public PageResult<Joke> getJokes(Limit limit, int type, int newOrHotflag) {
         return jokeDao.getJokes(limit,type,newOrHotflag);
     }
+
+    /**
+     * 添加笑话
+     */
+    @Override
+    public void addJoke(Joke joke) {
+        jokeDao.addJoke(joke);
+    }
+
+    @Override
+    public PageResult<Joke>  getJokesByLike(Limit limit,Object... objects) {
+        return jokeDao.findJokesByLike(limit,objects);
+    }
+
 }

@@ -40,7 +40,7 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User findUserById(int userId) {
-        return null;
+        return userDao.findUserById(userId);
     }
 
     /**

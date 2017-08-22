@@ -17,4 +17,11 @@ public interface IJokeService {
      * @param newOrHotflag 标记是最新或者最热排序
      */
     public PageResult<Joke> getJokes(Limit limit,int type,int newOrHotflag);
+
+    /**
+     * 添加笑话
+     */
+    void addJoke(Joke joke);
+
+    PageResult<Joke>  getJokesByLike(Limit limit,Object...objects);
 }

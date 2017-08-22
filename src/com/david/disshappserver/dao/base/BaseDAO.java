@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 
 import com.david.disshappserver.common.Limit;
 import com.david.disshappserver.common.PageResult;
+import com.david.disshappserver.utils.LogUtils;
 import com.david.disshappserver.utils.ObjectUtils;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -803,6 +804,8 @@ public class BaseDAO extends HibernateDaoSupport {
 				// 组建参数
 				query.setFirstResult(limit.getStart());
 				query.setMaxResults(limit.getSize());
+				LogUtils.i(limit.getStart()+"start");
+				LogUtils.i(limit.getSize()+"getSize");
 				buildParameters(query, params);
 				return query.list();
 			}

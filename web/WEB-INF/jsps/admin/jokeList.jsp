@@ -93,9 +93,9 @@ function link(){
 			  <td width="21"><img src="resource/admin/images/ico07.gif" width="20" height="18" /></td>
 			  <td width="538">搜索笑话：
 			  	状态：<select id="vState" name="vState">
-					<option value="0">不限</option>
+					<option value="不限">不限</option>
 					<option value="可用">可用</option>
-					<option value="冻结">删除</option>
+					<option value="删除">删除</option>
 				</select>
 				关键字：<input name="vipName" value="${requestScope.map.vipName}" class="login-input" type="text" style="width:150px;height:20px;"/>
 			 	<input name="Submit4" type="submit" class="right-button02" value="查 询" />
@@ -160,9 +160,14 @@ function link(){
                 <td width="49%" align="right">[<a href="javascript:changePage('1')" class="right-font08">首页</a> | <a href="javascript:changePage('-')" class="right-font08">上一页</a> | <a href="javascript:changePage('+')" class="right-font08">下一页</a> | <a href="javascript:changePage('n')" class="right-font08">末页</a>] 转至：</td>
                 <td width="1%"><table width="20" border="0" cellspacing="0" cellpadding="0">
                     <tr>
+                        <%--跳转到某个页。传入用户输入的内容和页码
+
+                        vState 状态：分为 可用，删除等
+                        page：页码，分页的内容
+                        --%>
                       <td width="1%"><input id="page" name="textfield3" type="text" class="right-textfield03" size="1" value="${requestScope.map.page }" maxlength="2" onkeypress="return check(event)" onpaste="return false;" ondragenter="return false" style="ime-mode:disabled"/></td>
                       <td width="87%"><input name="Submit23222" type="button" class="right-button06" onclick="goPage()" value=" " />
-                      <input type="hidden" value="${requestScope.map.userState }" name="state">
+                      <input type="hidden" value="${requestScope.map.vState }" name="state">
                       <input type="hidden" value="${requestScope.map.page }" name="pageNo">
                       </td>
                     </tr>
@@ -204,7 +209,11 @@ function link(){
 			alert("请输入要跳转的页码！");
 		}else{
 			if(!isNaN(page)){
-				location = "vip!getAllVips.do?page="+page+"&vState="+encodeURI("${requestScope.map.vState}")+"&vipName="+encodeURI("${requestScope.map.vipName}");
+			    /*输入的内容，然后进行跳转到action*/
+			   // alert(page);
+			    //alert(requestScope.map.vState);
+			    //alert(requestScope.map.vipName);
+				location = "<%=basePath%>admin/joke/goPage?pageCount="+page+"&vState="+encodeURI("${requestScope.map.vState}")+"&vipName="+encodeURI("${requestScope.map.vipName}");
 			}
 		}
 	}

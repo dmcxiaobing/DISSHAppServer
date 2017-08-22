@@ -11,4 +11,8 @@ import com.david.disshappserver.common.PageResult;
  */
 public interface IJokeDao {
     PageResult<Joke> getJokes(Limit limit, int type, int newOrHotflag);
+
+    void addJoke(Joke joke);
+
+    PageResult<Joke> findJokesByLike(Limit limit,Object[] params);
 }

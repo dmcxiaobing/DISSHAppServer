@@ -23,9 +23,12 @@ public class UserDaoImpl extends BaseDAO implements IUserDao {
         return super.find("from User where role = ?",User.ROLE_ADMIN);
     }
 
+    /**
+     * 根据用户ID查找用户
+     */
     @Override
     public User findUserById(int userId) {
-        return null;
+        return super.getUniqueResult("from User where id = ?",userId);
     }
 
     /**
@@ -42,10 +45,6 @@ public class UserDaoImpl extends BaseDAO implements IUserDao {
         return findUserById(userId);
     }
 
-    @Override
-    public ResponseInfo login(String username, String password) {
-        return null;
-    }
 
     /**
      * 根据用户名查找用户
