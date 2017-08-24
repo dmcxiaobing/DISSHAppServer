@@ -21,14 +21,14 @@ body {
 }
 -->
 </style>
-<link href="resource/admin/css/css.css" rel="stylesheet" type="text/css" />
-<link href="resource/admin/css/style.css" type="text/css" rel="stylesheet">
+<link href="<%=basePath%>resource/admin/css/css.css" rel="stylesheet" type="text/css" />
+<link href="<%=basePath%>resource/admin/css/style.css" type="text/css" rel="stylesheet">
 </head>
 <%--这里实现回车进行登陆--%>
 <body onkeydown="if(event.keyCode==13){check()}">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td height="147" background="resource/admin/images/top02.gif"><img src="resource/admin/images/top03.gif" width="776" height="147" /></td>
+    <td height="147" background="<%=basePath%>resource/admin/images/top02.gif"><img src="resource/admin/images/top03.gif" width="776" height="147" /></td>
   </tr>
 </table>
 <table width="562" border="0" align="center" cellpadding="0" cellspacing="0" class="right-table03">
@@ -38,14 +38,14 @@ body {
       <tr>
         <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="login-text01">
           <tr>
-            <td align="center"><img src="resource/admin/images/ico13.gif" width="107" height="97" /></td>
+            <td align="center"><img src="<%=basePath%>resource/admin/images/ico13.gif" width="107" height="97" /></td>
           </tr>
           <tr>
             <td height="40" align="center">&nbsp;</td>
           </tr>
           
         </table></td>
-        <td><img src="resource/admin/images/line01.gif" width="5" height="292" /></td>
+        <td><img src="<%=basePath%>resource/admin/images/line01.gif" width="5" height="292" /></td>
       </tr>
     </table></td>
     <td><table width="100%" border="0" cellspacing="0" cellpadding="0">

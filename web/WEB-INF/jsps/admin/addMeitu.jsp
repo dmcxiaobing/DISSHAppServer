@@ -11,9 +11,9 @@
 <html>
 <head>
 <link rel="stylesheet" rev="stylesheet"
-	href="resource/admin/css/style.css" type="text/css" media="all" />
-<script type="text/javascript" src="resource/js/jquery.js"></script>
-<script type="text/javascript" src="resource/js/ajaxfileupload.js"></script>
+	href="<%=basePath%>resource/admin/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="<%=basePath%>resource/js/jquery.js"></script>
+<script type="text/javascript" src="<%=basePath%>resource/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
 	function ajaxFileUpload() {
 	
@@ -109,7 +109,7 @@
 										<tr>
 											<td nowrap align="right" width="13%">上传预览:</td>
 											<td>
-												<img id="loading" src="resource/images/loading.gif" style="display: none;">
+												<img id="loading" src="<%=basePath%>resource/images/loading.gif" style="display: none;">
 											</td>
 										</tr>
 										<form action="meituadmin/addmeitu" method="post" name="addForm" id="addForm">

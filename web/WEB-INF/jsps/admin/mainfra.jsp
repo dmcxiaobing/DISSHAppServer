@@ -30,7 +30,7 @@ body {
   <tr>
     <td><table width="768" height="500" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td valign="top"><img src="resource/admin/images/welcome.gif" width="768" height="536" /></td>
+        <td valign="top"><img src="<%=basePath%>resource/admin/images/welcome.gif" width="768" height="536" /></td>
       </tr>
     </table></td>
   </tr>

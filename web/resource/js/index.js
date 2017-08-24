@@ -55,13 +55,13 @@ function generateJingXuanHtml(list){
 			.append('</div>')
 
 			.append('<div class="row font_option">')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3" ><img src="resource/images/ic_ding_normal.png"/>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3" ><img src="<%=basePath%>resource/images/ic_ding_normal.png"/>')
 			.append(list[i].supportsNum).append('</div>')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="resource/images/ic_cai_normal.png"/>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="<%=basePath%>resource/images/ic_cai_normal.png"/>')
 			.append(list[i].opposesNum).append('</div>')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="resource/images/ic_comment_normal.png"/>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="<%=basePath%>resource/images/ic_comment_normal.png"/>')
 			.append(list[i].commentNum).append('</div>')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="resource/images/ic_forward_normal.png"/></div>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="<%=basePath%>resource/images/ic_forward_normal.png"/></div>')
 			.append('</div>')
 			
 		    .append('</div>');
@@ -82,13 +82,13 @@ function generateJingXuanHtml(list){
 			.append('</div>')
 
 			.append('<div class="row font_option">')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3" ><img src="resource/images/ic_ding_normal.png"/>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3" ><img src="<%=basePath%>resource/images/ic_ding_normal.png"/>')
 			.append(list[i].supportsNum).append('</div>')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="resource/images/ic_cai_normal.png"/>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="<%=basePath%>resource/images/ic_cai_normal.png"/>')
 			.append(list[i].opposesNum).append('</div>')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="resource/images/ic_comment_normal.png"/>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="<%=basePath%>resource/images/ic_comment_normal.png"/>')
 			.append(list[i].commentNum).append('</div>')
-			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="resource/images/ic_forward_normal.png"/></div>')
+			.append('<div class="col-xs-3 col-sm-3 col-md-3"><img src="<%=basePath%>resource/images/ic_forward_normal.png"/></div>')
 			.append('</div>')
 			
 		    .append('</div>');

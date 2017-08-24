@@ -48,8 +48,8 @@ html { overflow-x: auto; overflow-y: auto; border:0;}
 -->
 </style>
 
-<link href="resource/admin/css/css.css" rel="stylesheet" type="text/css" />
-<link href="resource/admin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="<%=basePath%>resource/admin/css/css.css" rel="stylesheet" type="text/css" />
+<link href="<%=basePath%>resource/admin/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <SCRIPT language=JavaScript>
 function sousuo(){
@@ -86,11 +86,11 @@ function link(){
   <tr>
     <td height="30">      <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td height="62" background="resource/admin/images/nav04.gif">
+          <td height="62" background="<%=basePath%>resource/admin/images/nav04.gif">
            <form action="vip!getAllVips.do" method="post" style="margin:0px;">
 		   <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
 		    <tr>
-			  <td width="21"><img src="resource/admin/images/ico07.gif" width="20" height="18" /></td>
+			  <td width="21"><img src="<%=basePath%>resource/admin/images/ico07.gif" width="20" height="18" /></td>
 			  <td width="538">搜索笑话：
 			  	状态：<select id="vState" name="vState">
 					<option value="不限">不限</option>
@@ -140,7 +140,7 @@ function link(){
 	            		<fmt:formatDate value="${joke.createDate}" pattern="yyyy-MM-dd" />
 	            	</td>
                     <td>
-                    	<img src="resource/admin/images/index1_68.gif"/> <a class="A-hong" href="vip!findVipToUpdateAdmin.do?vipid=${v.vipid }">修改</a>
+                    	<img src="<%=basePath%>resource/admin/images/index1_68.gif"/> <a class="A-hong" href="vip!findVipToUpdateAdmin.do?vipid=${v.vipid }">修改</a>
                     </td>
                   </tr>
                </c:forEach>
@@ -149,7 +149,7 @@ function link(){
       </table>
       <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
-          <td height="6"><img src="resource/admin/images/spacer.gif" width="1" height="1" /></td>
+          <td height="6"><img src="<%=basePath%>resource/admin/images/spacer.gif" width="1" height="1" /></td>
         </tr>
         <tr>
           <td height="33"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="right-font08">

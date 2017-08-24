@@ -9,7 +9,7 @@
 <base href="<%=basePath%>">
 <html>
 <head>
-<link rel="stylesheet" rev="stylesheet" href="resource/admin/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" rev="stylesheet" href="<%=basePath%>resource/admin/css/style.css" type="text/css" media="all" />
 <script language="JavaScript" type="text/javascript">
 function link(){
 	var vippoint = document.getElementById("vippoint").value;

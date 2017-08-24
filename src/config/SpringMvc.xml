@@ -65,7 +65,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
     <!-- 用以访问静态资源 -->
     <mvc:default-servlet-handler/>
-
+    <!--配置上传文件-->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- set the max upload size100MB -->
