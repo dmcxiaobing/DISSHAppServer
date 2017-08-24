@@ -13,10 +13,7 @@ import com.david.disshappserver.common.constants.AdminConstant;
 import com.david.disshappserver.service.IJokeImgService;
 import com.david.disshappserver.service.IJokeService;
 import com.david.disshappserver.service.IUserService;
-import com.david.disshappserver.utils.AjaxUtils;
-import com.david.disshappserver.utils.CommonUtils;
-import com.david.disshappserver.utils.LogUtils;
-import com.david.disshappserver.utils.UpLoadUtils;
+import com.david.disshappserver.utils.*;
 import org.apache.commons.fileupload.FileItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
@@ -71,7 +69,7 @@ public class JokeImgController {
      */
     @ResponseBody
     @RequestMapping(value = "/jokeImg/ajaxUploadImg", method = RequestMethod.POST)
-    public String ajaxUploadImg(@RequestParam(required = true) MultipartFile fileToUpload) throws IOException {
+    public String ajaxUploadImg(@RequestParam(required = true) MultipartFile fileToUpload, HttpServletResponse response) throws IOException {
         LogUtils.i("上传图片");
         if (fileToUpload == null) {
             //上传图片为空
@@ -113,6 +111,7 @@ public class JokeImgController {
             //设置为假的地址图片
             ajaxResponse.setResult("https://avatars2.githubusercontent.com/u/13946951?v=4&s=460");
             ajaxResponse.setMsg("上传成功");
+//            FastJsonUtils.write_json(response,FastJsonUtils.toJSONString(ajaxResponse));
             return AjaxUtils.ajaxSuccess(ajaxResponse);
         } catch (Exception e) {
             return AjaxUtils.ajaxError(e, "服务器异常");

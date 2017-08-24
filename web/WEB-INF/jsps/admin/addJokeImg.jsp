@@ -43,7 +43,7 @@
 			url : '/admin/jokeImg/ajaxUploadImg',
 			secureuri : false,
 			fileElementId : 'fileToUpload',
-//			dataType : 'json',
+			//dataType : 'json',
 			dataType : 'data',
 			success : function(data, status) {
                 //alert(data);<pre style="word-wrap: break-word; white-space: pre-wrap;">解决带有这个标签的内容
@@ -69,7 +69,7 @@
 				}
 			},
 			error : function(data, status, e) {
-				alert('上传出错'+data);
+				alert('上传出错');
 				$("#loading").hide();
 			}
 		})
