@@ -1,5 +1,11 @@
 # DISSHAppServer
 
+前提说明,仅供参考.若是用于商业本人不负任何法律责任.
+
+部分资源来自互联网收集，并修改，归原作者所有，感谢。
+
+当然如果您感觉我侵犯了您的权益，请私信，我会立刻删除相关内容。
+
 app接口的管理后台和接口服务端。架构：SpringMvc,Spring,Hibernate
 
 this is david idea app server project....

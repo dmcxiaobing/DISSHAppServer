@@ -1,14 +1,18 @@
-package com.david.disshappserver.service;
+package com.david.disshappserver.dao;
 
-import com.david.disshappserver.beans.Joke; /**
+import com.david.disshappserver.beans.Joke;
+
+import java.io.Serializable;
+
+/**
  * @Author ：程序员小冰
  * @新浪微博 ：http://weibo.com/mcxiaobing
  * @GitHub: https://github.com/QQ986945193
  */
-public interface IJokeImgService {
+public interface IJokeImgDao {
     Integer addJokeImg(Joke joke);
 
     Joke findJokeImgById(int jokeImgId);
 
-    void update(Joke joke);
+    void updateJoke(Joke joke);
 }
