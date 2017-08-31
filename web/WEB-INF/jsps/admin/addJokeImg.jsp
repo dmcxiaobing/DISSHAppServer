@@ -40,7 +40,8 @@
 
 		$.ajaxFileUpload({
 			//这里设置为post请求
-			url : '/admin/jokeImg/ajaxUploadImg',
+//			url : '/admin/jokeImg/ajaxUploadImg',
+            url : '/upload/jokeImg',
 			secureuri : false,
 			fileElementId : 'fileToUpload',
 			//dataType : 'json',

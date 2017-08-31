@@ -65,7 +65,7 @@ public class JokeImgController {
     }
 
     /**
-     * ajax进行上传图片
+     * ajax进行上传图片  这是存到本地。这里默认使用七牛云存储。详情看uploadController
      */
     @ResponseBody
     @RequestMapping(value = "/jokeImg/ajaxUploadImg", method = RequestMethod.POST)
