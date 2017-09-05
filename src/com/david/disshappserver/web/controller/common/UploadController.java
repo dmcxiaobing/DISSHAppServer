@@ -8,6 +8,7 @@ import com.david.disshappserver.utils.LogUtils;
 import com.david.disshappserver.utils.QiNiuUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -30,8 +31,8 @@ public class UploadController {
      */
     @ResponseBody
     @RequestMapping("/jokeImg")
-    public String jokeImg(@RequestParam(required = true) MultipartFile fileToUpload){
-        if (fileToUpload == null){
+    public String jokeImg(@RequestParam(required = true) MultipartFile fileToUpload) {
+        if (fileToUpload == null) {
             LogUtils.i("上传图片失败，图片为空");
             return AjaxUtils.ajaxFail("上传图片为空");
         }
@@ -45,14 +46,14 @@ public class UploadController {
                 return AjaxUtils.ajaxFail("非图片内容");
             }
             //文件名
-            String rskey = CommonUtils.getUUIDRandomNum()+extention;
+            String rskey = CommonUtils.getUUIDRandomNum() + extention;
 //           QiNiuUtils.upload2Stream(rskey,fileToUpload.getInputStream(),true);
             InputStream input = fileToUpload.getInputStream();
 //            QiNiuUtils.newUploadQiniu("qq986945193github",rskey);
-            QiNiuUtils.newIo2UploadQiniu(rskey,input);
+            QiNiuUtils.newIo2UploadQiniu(rskey, input);
             LogUtils.i("上传图片成功");
             AjaxResponse ajaxResponse = new AjaxResponse();
-            ajaxResponse.setResult(InitConfig.get("qiniu.url")+rskey);
+            ajaxResponse.setResult(InitConfig.get("qiniu.url") + rskey);
             ajaxResponse.setMsg("上传图片成功");
             return AjaxUtils.ajaxSuccess(ajaxResponse);
         } catch (Exception e) {
@@ -62,7 +63,15 @@ public class UploadController {
                 e1.printStackTrace();
             }
         }
-        return  null;
+        return null;
     }
 
+    /**
+     * 上传美图
+     */
+    @ResponseBody
+    @RequestMapping(value = "/beauty", method = RequestMethod.POST)
+    public String uploadBeauty(@RequestParam(required = true) MultipartFile fileToUpload) {
+        return jokeImg(fileToUpload);
+    }
 }

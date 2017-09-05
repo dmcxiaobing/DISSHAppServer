@@ -88,7 +88,7 @@ function link(){
 		   <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
 		    <tr>
 			  <td width="21"><img src="<%=basePath%>resource/admin/images/ico07.gif" width="20" height="18" /></td>
-			  <td width="538">搜索趣事：
+			  <td width="538">搜索笑话：
 			  	状态：<select id="vState" name="vState">
 					<option value="0">不限</option>
 					<option value="可用">可用</option>

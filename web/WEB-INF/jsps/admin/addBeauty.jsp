@@ -38,11 +38,19 @@
 		});
 
 		$.ajaxFileUpload({
-			url : 'upload/meitu',
+			url : '/upload/beauty',
 			secureuri : false,
 			fileElementId : 'fileToUpload',
-			dataType : 'json',
+			dataType : 'data',
+//            dataType : 'json',
 			success : function(data, status) {
+              //  alert(data);
+                var reg = /<pre.+?>(.+)<\/pre>/g;
+                var result = data.match(reg);
+                data = RegExp.$1;
+                //javascript 方式 字符串转换为json
+                data = eval("(" + data + ")");
+                //alert(data);
 				if(data.status == "200") {
 					//alert("上传成功，请添加美图");
 					$("#loading").attr("src", data.result);
@@ -60,7 +68,7 @@
 		return false;
 	}
 	
-	function addQuTu() {
+	function addBeauty() {
 		var imgUrl = $("#imgUrl").val();
 		if(imgUrl == "") {
 			alert("请先上传要添加的美图！");
@@ -112,7 +120,7 @@
 												<img id="loading" src="<%=basePath%>resource/images/loading.gif" style="display: none;">
 											</td>
 										</tr>
-										<form action="meituadmin/addmeitu" method="post" name="addForm" id="addForm">
+										<form action="<%=basePath%>admin/beauty/addSaveImg" method="post" name="addForm" id="addForm">
 											<tr>
 												<td nowrap align="right" width="13%">美图标题:</td>
 												<td><textarea id="title" name="title" rows="2"
@@ -121,9 +129,9 @@
 											<tr>
 												<td nowrap align="right" width="13%">是否精选:</td>
 												<td>
-													<label for="jingxuan">是</label><input type="radio" id="jingxuan" name="isJingXuan" value="1" />
+													<label for="isBest">是</label><input type="radio" id="isBest" name="isBest" value="1" />
     												&nbsp;&nbsp;&nbsp;&nbsp;
-    												<label for="notJingxuan">否</label><input type="radio" id="notJingxuan" name="isJingXuan" value="0" checked />
+    												<label for="notIsBest">否</label><input type="radio" id="notIsBest" name="isBest" value="0" checked />
 												</td>
 											</tr>
 											<tr>
@@ -135,7 +143,7 @@
 											<tr>
 												<td nowrap align="right" width="13%">支持数:</td>
 												<td>
-													<input type="text" style="width:100px;" name="dingNum" id="dingNum" value="0"
+													<input type="text" style="width:100px;" name="supportsNum" id="supportsNum" value="0"
 													 onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
 												</td>
 											</tr>
@@ -150,7 +158,7 @@
 											<TR>
 												<TD colspan="2" align="center" height="50px"><input
 													type="button" value="添加" class="button"
-													onclick="addQuTu()" /></TD>
+													onclick="addBeauty()" /></TD>
 											</TR>
 										</form>
 									</table>

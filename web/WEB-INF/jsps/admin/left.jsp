@@ -193,7 +193,7 @@ body {
 					<tr>
 						<td width="9%" height="20"><img id="xiaotu2"
 							src="<%=basePath%>resource/admin/images/ico06.gif" width="8" height="12" /></td>
-						<td width="91%"><a href="<%=basePath%>meituadmin/add/index"
+						<td width="91%"><a href="<%=basePath%>admin/beauty/addBeauty"
 							target="mainFrame" class="left-font03" onClick="tupian('2');">添加美图</a></td>
 					</tr>
 				</table> 
